@@ -1,3 +1,3 @@
-#Meu Portfólio Web
+# Meu portfólio web
 
-> Repositório em construção.
+> Reposiório em construção
