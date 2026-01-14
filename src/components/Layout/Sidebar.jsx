@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { projectsData } from "../../data/projects";
 
+const getFileIcon = (fileName) => {
+  if (fileName.endsWith(".js")) return "🟨";
+  if (fileName.endsWith(".jsx")) return "⚛️";
+  if (fileName.endsWith(".tsx")) return "🟦";
+  if (fileName.endsWith(".ts")) return "🔷";
+  if (fileName.endsWith(".css")) return "#️⃣";
+  if (fileName.endsWith(".html")) return "🌐";
+  if (fileName.endsWith(".json")) return "{}";
+  if (fileName.endsWith(".py")) return "🐍";
+  if (fileName.endsWith(".dart")) return "🎯";
+  return "📄";
+};
+
 const FileItem = ({ name, active, onClick, depth = 0 }) => (
   <div
     className={`file-item ${active ? "active" : ""}`}
     onClick={onClick}
     style={{ paddingLeft: `${depth * 15 + 20}px` }}
   >
-    <span className="file-icon">{"{}"}</span>
+    <span className="file-icon">{getFileIcon(name)}</span>
     {name}
   </div>
 );

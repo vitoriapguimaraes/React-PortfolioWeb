@@ -55,7 +55,7 @@
 }
 
 .code-pane {
-  width: 50%; /* Fixed 50% width */
+  width: 40%; /* Reduced width as requested */
   min-width: 300px; /* Minimum width to prevent collapse */
   background-color: var(--bg-editor);
   color: #d4d4d4;
@@ -64,6 +64,7 @@
   overflow-y: auto; /* Independent scrolling */
   border-right: 1px solid #3e3e42;
   position: relative;
+  font-size: 13px; /* Reduced font size */
 }
 
 .line-numbers {

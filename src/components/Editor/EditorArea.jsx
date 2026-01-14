@@ -143,20 +143,37 @@ class ${project.name.replace(/\s/g, "")} extends StatelessWidget {
   return `// File ${fileName} not found`;
 };
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+// ... (getCodeContent function remains same, just replacing component part)
+
 const EditorArea = ({ activeFile }) => {
+  const codeString = getCodeContent(activeFile);
+  const language = activeFile.endsWith(".py")
+    ? "python"
+    : activeFile.endsWith(".css")
+    ? "css"
+    : activeFile.endsWith(".dart")
+    ? "dart"
+    : activeFile.endsWith(".json")
+    ? "json"
+    : "javascript";
+
   return (
     <div className="editor-area">
       {/* Tabs */}
       <div className="editor-tabs">
         <div className="tab active">
           <span className="tab-icon">
-            {activeFile.endsWith(".js") || activeFile.endsWith(".jsx")
+            {/* Reuse getFileIcon logic conceptually or import if shared */}
+            {activeFile.endsWith("react") ||
+            activeFile.endsWith("js") ||
+            activeFile.endsWith("jsx")
               ? "JS"
-              : activeFile.endsWith(".py")
+              : activeFile.endsWith("py")
               ? "PY"
-              : activeFile.endsWith(".json")
-              ? "{}"
-              : "📄"}
+              : "{}"}
           </span>
           {activeFile}
           <span className="close-tab">×</span>
@@ -168,11 +185,26 @@ const EditorArea = ({ activeFile }) => {
         {/* Left: Code */}
         <div className="code-pane">
           <div className="line-numbers">
-            {Array.from({ length: 40 }, (_, i) => (
+            {codeString.split("\n").map((_, i) => (
               <div key={i}>{i + 1}</div>
             ))}
           </div>
-          <pre className="code-content">{getCodeContent(activeFile)}</pre>
+          <SyntaxHighlighter
+            language={language}
+            style={vscDarkPlus}
+            customStyle={{
+              margin: 0,
+              padding: 0,
+              background: "transparent",
+              fontSize: "13px",
+              lineHeight: "1.5",
+            }}
+            wrapLines={true}
+            wrapLongLines={true} // Force wrapping
+            showLineNumbers={false}
+          >
+            {codeString}
+          </SyntaxHighlighter>
         </div>
 
         {/* Right: Preview */}
