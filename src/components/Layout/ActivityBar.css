@@ -1,0 +1,40 @@
+.activity-bar {
+  width: 50px;
+  background-color: var(--bg-activity-bar);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  border-right: 1px solid #252526;
+  z-index: 10;
+}
+
+.activity-bar .icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.activity-bar .icon:hover {
+  opacity: 1;
+}
+
+.activity-bar .icon.active {
+  opacity: 1;
+  border-left: 2px solid var(--text-primary);
+}
+
+.activity-bar .icon.active svg path,
+.activity-bar .icon.active svg circle {
+  stroke: var(--text-primary);
+}
+
+.activity-bar .spacer {
+  flex-grow: 1;
+}
