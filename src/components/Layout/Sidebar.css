@@ -5,7 +5,9 @@
   font-size: 13px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid #3e3e42; /* Separator */
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0; /* Prevent growing */
   user-select: none;
 }
 

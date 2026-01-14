@@ -46,21 +46,24 @@
   opacity: 1;
 }
 
+/* Editor Content (Split View) */
 .editor-split-view {
   display: flex;
   flex-grow: 1;
   overflow: hidden;
+  height: 100%; /* Ensure it takes full height */
 }
 
 .code-pane {
-  flex: 1;
-  display: flex;
+  width: 50%; /* Fixed 50% width */
+  min-width: 300px; /* Minimum width to prevent collapse */
   background-color: var(--bg-editor);
   color: #d4d4d4;
-  font-family: var(--font-family-code);
-  font-size: 14px;
-  margin-top: 10px;
-  overflow: auto;
+  display: flex;
+  font-family: "Consolas", "Courier New", monospace;
+  overflow-y: auto; /* Independent scrolling */
+  border-right: 1px solid #3e3e42;
+  position: relative;
 }
 
 .line-numbers {
