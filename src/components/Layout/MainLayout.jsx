@@ -2,10 +2,14 @@ import React from "react";
 import "./MainLayout.css";
 import ActivityBar from "./ActivityBar";
 import Sidebar from "./Sidebar";
+import TitleBar from "./TitleBar";
 
 const MainLayout = ({ children, activeFile, onFileSelect }) => {
   return (
     <div className="main-layout">
+      {/* 0. Title Bar (Linux/VSCode Style) */}
+      <TitleBar />
+
       <div className="main-body">
         {/* 1. Activity Bar (Leftmost) */}
         <ActivityBar />

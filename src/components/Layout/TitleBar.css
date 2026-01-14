@@ -1,0 +1,47 @@
+.title-bar {
+  height: 30px;
+  background-color: var(--bg-activity-bar); /* Use same dark bg */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: #cccccc;
+  font-size: 13px;
+  border-bottom: 1px solid #000000;
+  user-select: none;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.window-control.close {
+  background-color: #ff5f56;
+}
+.window-control.minimize {
+  background-color: #ffbd2e;
+}
+.window-control.maximize {
+  background-color: #27c93f;
+}
+
+.title-bar-text {
+  flex-grow: 1;
+  text-align: center;
+  color: #999999;
+  font-family: var(--font-family-ui);
+}
+
+.linux-actions {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
