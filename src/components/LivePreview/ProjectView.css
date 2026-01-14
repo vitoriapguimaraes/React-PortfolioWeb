@@ -1,0 +1,114 @@
+.project-detail-view {
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.project-header-section h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.project-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.category {
+  background-color: #264f78;
+  color: white;
+}
+
+.badge.status {
+  background-color: #3e3e42;
+  border: 1px solid #555;
+}
+
+.project-image-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid #3e3e42;
+  background-color: #000;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-description h3,
+.project-tech-stack h3 {
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3e3e42;
+  padding-bottom: 5px;
+}
+
+.project-description p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  background-color: #2d2d2d;
+  color: #4ec9b0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: var(--font-family-code);
+  font-size: 13px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0069b0;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}

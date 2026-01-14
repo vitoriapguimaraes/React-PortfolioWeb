@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.flake8
+.editorconfig
+.vscode
+.vscode/settings.json

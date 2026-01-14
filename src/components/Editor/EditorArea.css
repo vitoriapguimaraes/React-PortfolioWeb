@@ -1,0 +1,103 @@
+.editor-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.editor-tabs {
+  display: flex;
+  background-color: var(--bg-sidebar);
+  border-bottom: 1px solid var(--bg-app); /* small separator */
+}
+
+.tab {
+  padding: 8px 15px;
+  background-color: var(--bg-tabs);
+  color: var(--text-secondary);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--bg-app);
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.tab.active {
+  background-color: var(--bg-editor);
+  color: var(--text-primary);
+  border-top: 1px solid var(--accent-color);
+}
+
+.tab-icon {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #f7df1e; /* JS Yellow default */
+}
+
+.close-tab {
+  margin-left: auto;
+  font-size: 14px;
+  margin-left: 10px;
+  opacity: 0;
+}
+
+.tab:hover .close-tab {
+  opacity: 1;
+}
+
+/* Editor Content (Split View) */
+.editor-split-view {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  height: 100%; /* Ensure it takes full height */
+}
+
+.code-pane {
+  width: 40%; /* Reduced width as requested */
+  min-width: 300px; /* Minimum width to prevent collapse */
+  background-color: var(--bg-editor);
+  color: #d4d4d4;
+  display: flex;
+  font-family: "Consolas", "Courier New", monospace;
+  overflow-y: auto; /* Independent scrolling */
+  border-right: 1px solid #3e3e42;
+  position: relative;
+  font-size: 13px; /* Reduced font size */
+}
+
+.line-numbers {
+  width: 50px;
+  text-align: right;
+  padding-right: 15px;
+  color: #858585;
+  user-select: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-content {
+  flex: 1;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.preview-pane-container {
+  flex: 1;
+  border-left: 1px solid var(--border-color);
+  background-color: #1e1e1e; /* Or white if preview needs it, but keeping dark mode safe */
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-header {
+  padding: 5px 10px;
+  background-color: #252526;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #858585;
+  border-bottom: 1px solid var(--border-color);
+}

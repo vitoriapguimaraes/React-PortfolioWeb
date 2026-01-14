@@ -1,0 +1,87 @@
+.resume-view {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #333;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.resume-header h2 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: normal;
+}
+
+.resume-links {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.resume-links a {
+  color: #007acc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.resume-view section {
+  margin-bottom: 25px;
+}
+
+.resume-view h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+.resume-entry {
+  margin-bottom: 15px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.entry-header h4 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.entry-header .date {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.company {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.resume-view p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 10px;
+}
